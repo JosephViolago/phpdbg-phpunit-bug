@@ -17,7 +17,7 @@ clean-dependencies:
 
 .PHONY: reset-dependencies
 reset-dependencies:
-	git checkout composer.lock
+	git checkout composer.json composer.lock
 	rm -rf vendor
 	make build-dependencies
 
@@ -53,10 +53,13 @@ ${55_versions}: clean-dependencies
 	make test
 
 .PHONY: test-phpunit-53
-test-phpunit-53: $(53_versions) reset-dependencies
+test-phpunit-53: $(53_versions)
+	make reset-dependencies
 
 .PHONY: test-phpunit-54
-test-phpunit-54: $(54_versions) reset-dependencies
+test-phpunit-54: $(54_versions)
+	make reset-dependencies
 
 .PHONY: test-phpunit-55
-test-phpunit-55: $(55_versions) reset-dependencies
+test-phpunit-55: $(55_versions)
+	make reset-dependencies
