@@ -23,12 +23,12 @@ reset-dependencies:
 
 .PHONY: test
 test: build-dependencies
-	vendor/bin/phpunit || true
+	vendor/bin/phpunit $(TESTARGS) || true
 	@echo "\n\n"
 	@printf '%.0s-' {1..80}; echo
 	@printf '%.0s-' {1..80}; echo
 	@echo "\n\n"
-	phpdbg -qrr vendor/bin/phpunit || true
+	phpdbg -qrr vendor/bin/phpunit $(TESTARGS) || true
 
 53_versions := $(shell echo "5.3."{0..5})
 54_versions := $(shell echo "5.4."{0..8})
