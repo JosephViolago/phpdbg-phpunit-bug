@@ -1,7 +1,7 @@
 # phpdbg-phpunit-bug
 
 Symptom: `phpdbg` does not evaluate the assertions of tests run in isolation, but will always returns true.
-This results in a false positive positive.
+This results in a false positive.
 
 ## Info
 
