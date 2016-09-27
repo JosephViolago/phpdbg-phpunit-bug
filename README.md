@@ -1,4 +1,6 @@
 # phpdbg-phpunit-bug
+[![Build Status](https://travis-ci.org/JosephViolago/phpdbg-phpunit-bug.svg?branch=master)](https://travis-ci.org/JosephViolago/phpdbg-phpunit-bug)
+
 
 Symptom: `phpdbg` does not evaluate the assertions of tests run in isolation, but will always returns true.
 This results in a false positive.
